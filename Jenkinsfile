@@ -31,12 +31,6 @@ pipeline {
                 sh 'mvn clean package'
             }
         }
-
-        stage('Archive Artifact') {
-            steps {
-                archiveArtifacts artifacts: 'target/hello-world-1.0-SNAPSHOT.jar', fingerprint: true
-            }
-        }
     }
 
     post {
