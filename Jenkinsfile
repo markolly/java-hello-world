@@ -7,6 +7,7 @@ pipeline {
 
     environment {
         MAVEN_OPTS = "-Xmx512m"
+        REPO_URL = 'https://github.com/markolly/java-hello-world.git'
     }
 
     stages {
