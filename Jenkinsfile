@@ -10,17 +10,6 @@ pipeline {
         REPO_URL = 'https://github.com/markolly/java-hello-world.git'
     }
 
-    parameters {
-        gitParameter(
-            name: 'BRANCH',
-            type: 'PT_BRANCH_TAG',
-            defaultValue: 'origin/main',
-            branchFilter: 'origin/main',
-            tagFilter: '*',
-            sortMode: 'DESCENDING'
-        )
-    }
-
     stages {
         stage('Clone Repository') {
             steps {
